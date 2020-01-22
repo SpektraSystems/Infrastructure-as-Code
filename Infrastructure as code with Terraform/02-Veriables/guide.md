@@ -93,7 +93,7 @@ Now, using [Terraform Azure provider documentation for virtual machine](https://
   name                  = "tfignitepredayvm"
   location            = "<<<REGION OF YOUR ASSIGNED RESOURCE GROUP>>>"
   resource_group_name   = "<<<NAME OF YOUR ASSIGNED RESOURCE GROUP>>>"
-  vm_size               = "Standard_B1s"
+  vm_size               = "Standard_A1_v2"
   network_interface_ids = [azurerm_network_interface.predaynic.id]
 
   storage_image_reference {
