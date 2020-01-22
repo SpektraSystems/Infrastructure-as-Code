@@ -194,7 +194,7 @@ Go ahead and put the variable values for your variables "location" and "rg" into
 You use variables by prefixing their name with the keyword `var`, like below:
 
 ```terraform
-location            = "${var.location}"
+location            = var.location
 ```
 
 Go ahead and replace all previously hard-coded values for Azure regions and resource group name with variable definition.
