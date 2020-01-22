@@ -4,17 +4,27 @@
     "Language": "English",
     "Files": [
       {
-        "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/Start-your-first-Linux-Virtual-Machine-on-Azure/master/Exercise0.md",
+        "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/Infrastructure-as-Code/master/infrastructure%20as%20code%20with%20ARM/01-Basics/guide.md",
         "Order": 1
 
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/Start-your-first-Linux-Virtual-Machine-on-Azure/master/Exercise1.md",
+        "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/Infrastructure-as-Code/master/infrastructure%20as%20code%20with%20ARM/02-Variables/guide.md",
         "Order": 2
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/Start-your-first-Linux-Virtual-Machine-on-Azure/master/Exercise2.md",
+        "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/Infrastructure-as-Code/master/infrastructure%20as%20code%20with%20ARM/03-Helpers/guide.md",
         "Order": 3
+      },
+            {
+        "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/Infrastructure-as-Code/master/infrastructure%20as%20code%20with%20ARM/04-Security/guide.md",
+        "Order": 4
+
+      },
+            {
+        "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/Infrastructure-as-Code/master/infrastructure%20as%20code%20with%20ARM/05-Reusaability/guide.md",
+        "Order": 5
+
       }
     ]
   }
