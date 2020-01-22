@@ -136,7 +136,7 @@ New-AzResourceGroupDeployment -ResourceGroupName IoC-02-000000 -TemplateFile azu
 ```
 
 ```PowerShell
-New-AzResourceGroupDeployment -ResourceGroupName IoC-02-000000 -TemplateFile azuredeploy.json -TemplateParametersFile azuredeploy.parameters.json -Verbose
+New-AzResourceGroupDeployment -ResourceGroupName IoC-02-000000 -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json -Verbose
 ```
 
 Azure CLI
