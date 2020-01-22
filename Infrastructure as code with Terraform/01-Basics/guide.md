@@ -15,7 +15,7 @@ In short (TL;DR):
 - Terraform files are copied to the `clouddrive` folder in Cloud Shell upon saving so you don't need to explicitly copy files to Cloud Shell in order to run them there unless otherwise stated in the lab.
 - ALL Terraform execution including init, plan and apply will be **run from within Azure Cloud Shell** after pushing the files up.
 
-> **NOTE**: The first time you launch Cloud Shell from a new folder, you will be asked to set up the web application. Select Open to continue
+> **NOTE**: The first time you launch Cloud Shell from a new folder, you will be asked to set up the web application. Select Open to continue and create an storage account for cloud bash in empty resource group.
 
 ## Preliminaries
 By now you have already learned that Terraform uses proprietary domain specific language (DSL) to codify cloud resources. This language, called HashiCorp Language, or HCL for short, with its readability and ease of use, is one of the reasons Terraform is so popular. You will use HCL to define a VNet in this section.
