@@ -38,8 +38,6 @@ Expand for provider.tf code
 provider "azurerm" {
     subscription_id = "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
     client_id       = "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
-    client_secret   = "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
-    tenant_id       = "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
 }
 ```
 you can get this values form **Environment Details** page.
@@ -96,6 +94,7 @@ resource "azurerm_virtual_network" "predayvnet" {
   subnet {
     name           = "subnet1"
     address_prefix = "10.0.1.0/24"
+  }
   }
 ```
 </details>
