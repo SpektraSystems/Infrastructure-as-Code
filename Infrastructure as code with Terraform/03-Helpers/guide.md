@@ -37,9 +37,9 @@ Iterators help us create many copies of the same resource with a single line of 
 ```terraform
 resource "azurerm_managed_disk" "mydatadisks" {
   count                = 3
-  name                 = "disk1" + count.index
-  location             = var.rg
-  resource_group_name  = var.location
+  name                 = "disk1-${count.index}"
+  location             = var.location
+  resource_group_name  = var.rg
   storage_account_type = "Standard_LRS"
   create_option        = "Empty"
   disk_size_gb         = 30
