@@ -42,6 +42,7 @@ provider "azurerm" {
     tenant_id       = "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
 }
 ```
+you can get this values form **Environment Details**
 </details>
 
 ### Create vnet.tf
