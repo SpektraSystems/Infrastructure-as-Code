@@ -305,13 +305,7 @@ location = "" ## Enter the azure region for your resources
 secret_id = "lab04admin"
 key_vault = "" ## Enter the name of the pre-created key vault instance
 rg2 = "" ## Enter the name of the resource group where key vault exists
-tags = {
-    event           = "Ignite"
-    year            = "2019"
-    session_id      = "PRE04"
-    iac_tool        = "terraform"
-    lab             = "4"
-}
+
 ```
 </details>
 
