@@ -131,7 +131,6 @@ resource "azurerm_network_interface" "predaynic" {
     subnet_id                     = azurerm_subnet.predaysubnet.id
     private_ip_address_allocation = "Dynamic"
   }
-  tags                = var.tags
 }
 ```
 </details>
@@ -237,11 +236,6 @@ variable "key_vault" {
   description = "Name of the pre-existing key vault instance"
 }
 
-variable "tags" {
-  type        = map(string)
-  description = "tags to be used with all resources in the lab"
-}
-
 variable "vnet_name" {
   type        = string
   description = "Azure ID for Virtual Network where subnets will be placed"
@@ -308,8 +302,6 @@ resource "azurerm_virtual_machine" "predayvm" {
   os_profile_linux_config {
     disable_password_authentication = false
   }
-
-  tags                = var.tags
 }
 ```
 </details>
@@ -330,9 +322,8 @@ To reduce the number of times that you will need to type values, you will make u
 - rg
 - key_vault
 - rg2
-- tags
 
-To reference these values in the configuration replace the **var.** that was used to reference the variables with **local.**. Update the references in the `azurerm_virtual_network` resource for location, tags and rg to use the locals instead of variables.
+To reference these values in the configuration replace the **var.** that was used to reference the variables with **local.**. Update the references in the `azurerm_virtual_network` resource for location,rg to use the locals instead of variables.
 
 Lastly, use the module to add the subnet with associated security group rules and vm. The syntax for referring to a module is very similar to that of a resource with the a few exceptions.
 
@@ -355,7 +346,6 @@ The properties that you will use in the module are the variables that you define
 - vnet_name
 - subnet_cidr
 - security_group_rules
-- tags
 
 Use the figure above and the local variables to set the appropriate values for each module.
 
@@ -386,13 +376,6 @@ locals {
   location          = "East US 2"
   rg                = "" ## Enter the resource group pre-created in your lab
   key_vault          = "" ## Enter the name of the pre-created key vault instance
-  tags = {
-    event           = "Ignite"
-    year            = "2019"
-    session_id      = "PRE04"
-    iac_tool        = "terraform"
-    lab             = "5"
-  }
 }
 
 # Configure Vnet
@@ -401,7 +384,6 @@ resource "azurerm_virtual_network" "predayvnet" {
   location            = local.location
   resource_group_name = local.rg
   address_space       = ["172.16.0.0/16"]
-  tags                = local.tags
 }
 
 module "frontend" {
@@ -428,8 +410,6 @@ module "frontend" {
           destinationPortRange  = "22"
       }
   ]
-
-  tags                = local.tags
 }
 
 module "mysql_db" {
@@ -450,8 +430,6 @@ module "mysql_db" {
           destinationPortRange  = "3306"
       },
   ]
-
-  tags = local.tags
 }
 ```
 </details>
