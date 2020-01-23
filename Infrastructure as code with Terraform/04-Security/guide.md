@@ -175,10 +175,10 @@ Expand for full terraform.tfvars code
 </summary>
 
 ```terraform
-rg = "" ## Enter the resource group pre-created in your lab
+rg = "" ## Enter the resource group pre-created in your lab Ioc-02-XXXXX
 secret_id = "lab04admin"
 labUser = "" ## Enter the lab user name as shown in the Environment Details tab
-key_vault = "" ## Enter the name of the pre-created key vault instance
+key_vault = "" ## Enter the name of the pre-created key vault instance which is available on Ioc-02-XXXXX
 tenant_id = "" ## Enter the tenant ID for your lab user
 ```
 
