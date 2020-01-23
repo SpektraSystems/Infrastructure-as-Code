@@ -284,7 +284,8 @@ In Cloud Shell run the following command:
 ```terraform
 terraform taint azurerm_virtual_machine.predayvm
 ```
->**Note** before running any below commands firstly delete the osdisk. To perform this task open you Azure Portal navigate to your resource group (IoC-02-XXXXX) and select you os disk and delete.
+>**Note** before running any below commands firstly delete the osdisk. To perform this task open you Azure Portal navigate to your resource group (IoC-02-XXXXX) and select your osdisk(myosdisk1) and delete.
+
 Finally, as you have done in previous sections and labs:
 - Povision the new infrasctructure using Terraform plan and apply
 - Validate that everything was provisioned as expected.
