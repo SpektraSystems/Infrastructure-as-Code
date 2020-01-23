@@ -21,14 +21,14 @@ In order to create the secret in a secure manner, you will be introduced to the 
 
 ### Setup
 
-Before digging into the configuration, lets get the environment set up by create a folder in cloudshell for your code for this part of the lab. Name it something like "lab04-part1" then create the following 4 files in this new folder:
+Before digging into the configuration, Create a folder on the lab virtual machine where you will save configuration. for your code for this part of the lab name it something like "lab04-part1". Open VS Code and browse to the folder that you created for your configurations.Then create the following 4 files in this new folder:
 - providers.tf
 - main.tf
 - terraform.tfvars
 - variables.tf
 
 By this point, these files should look familiar.
-
+>**NOTE** Prior to running any Terraform commands in Azure Cloud Shell, make sure that you select View > Command Palette... > Azure Terraform: push in order to push your latest changes up to your cloud shell environment. 
 ### Configuration
 
 Now lets dig into the configuration (main.tf). 
