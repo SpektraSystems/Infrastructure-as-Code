@@ -403,7 +403,6 @@ resource "azurerm_virtual_machine" "tf_pre-day" {
     disable_password_authentication = false
   }
 
-  tags                = var.tags
 }
 ```
 </details>
