@@ -99,7 +99,7 @@ resource "azurerm_virtual_network" "predayvnet" {
 ```
 </details>
 
->**NOTE** Prior to running any Terraform commands in Azure Cloud Shell, make sure that you select View > Command Palette... > Azure Terraform: push in order to push your latest changes up to your cloud shell environment. 
+>**NOTE** (Navigate your cloud shell to clouddrive directory by using "cd clouddrive").Prior to running any Terraform commands in Azure Cloud Shell, make sure that you select View > Command Palette... > Azure Terraform: push in order to push your latest changes up to your cloud shell environment. 
 
 ## Initialize your Terraform environment
 Before provisioning your environement, you need to ensure that Terraform is initialized using the [init command](https://www.terraform.io/docs/commands/init.html). This process will initialize a working directory containing Terraform configuration files.
