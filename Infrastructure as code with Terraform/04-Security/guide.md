@@ -221,7 +221,7 @@ With the Terrform configuration complete, all that is left to do is to validate 
 - Initiallize the working directory
 - Create the execution plan
 - Apply the changes
->**NOTE** Prior to running any Terraform commands in Azure Cloud Shell, make sure that you select you directory in cloudshell. you can use "cd <your directory name>" command to goto your directory.
+>**NOTE** Prior to running any Terraform commands in Azure Cloud Shell, make sure that you select you directory in cloudshell. you can use "cd" command to goto your directory.
 #### CHEAT SHEET
 
 <details>
