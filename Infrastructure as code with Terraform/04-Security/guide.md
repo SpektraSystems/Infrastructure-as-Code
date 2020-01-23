@@ -28,7 +28,7 @@ Before digging into the configuration, Create a folder on the lab virtual machin
 - variables.tf
 
 By this point, these files should look familiar.
->**NOTE** Prior to running any Terraform commands in Azure Cloud Shell, make sure that you select View > Command Palette... > Azure Terraform: push in order to push your latest changes up to your cloud shell environment in clouddrive directory (Run this command to goto clouddrive directory "cd clouddrive" then sync).
+>**NOTE** Prior to running any Terraform commands in Azure Cloud Shell, make sure that you select View > Command Palette... > Azure Terraform: push in order to push your latest changes up to your cloud shell environment in clouddrive directory (Run this command to goto clouddrive directory "cd clouddrive" then push).
 ### Configuration
 
 Now lets dig into the configuration (main.tf). 
