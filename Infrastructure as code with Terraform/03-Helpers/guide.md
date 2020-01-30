@@ -109,7 +109,7 @@ Since network security rules in Azure must be associated with the network securi
 
 ```terraform
 resource "azurerm_network_security_group" "nsgsecureweb" {
-  name                = "secureweb"
+  name                = "web-rules"
   location            = var.location
   resource_group_name = var.rg
 
