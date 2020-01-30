@@ -70,9 +70,7 @@ A virtual network is a virtual, isolated portion of the Azure public network. Ea
 4. Use the [azure_rm_virtualnetwork](https://docs.ansible.com/ansible/latest/modules/azure_rm_virtualnetwork_module.html) to complete this step.
 5. Name your task appropriately so that you know precisely which step fails if Ansible runs into an issue.
 6. Run your playbook by right clicking your .yml file and select **Run Ansible Playbook in Cloud Shell**
-
-    ![Run in Cloud Shell](../../images/vs-run-in-cloudshell.png "Run in Cloud Shell")
-
+> **NOTE:** Follow Cheat Sheet to create Virtual Network.
 #### Cheat Sheet: VNET
 <details>
 <summary>
@@ -80,11 +78,15 @@ Expand to see how you can create a VNet
 </summary>
 
 ```yaml
-  - name: Create a virtual network. 
+  - name: Create Azure VM
+  hosts: localhost
+  connection: local
+  tasks:
+  - name: Create virtual network
     azure_rm_virtualnetwork:
-      resource_group: myResource_group
+      resource_group: IoC-02-144375 
       name: myVnet
-      address_prefixes: "172.16.0.0/16"
+      address_prefixes: "10.0.0.0/16"
 ```
 
 </details>
@@ -129,7 +131,7 @@ Expand to see how you can create a subnet
         resource_group: myResource_group
         virtual_network_name: myVnet
         name: myVnetSubnet
-        address_prefix_cidr:  "172.16.10.0/24"
+        address_prefix_cidr:  "10.0.0.0/24"
 ```
 
 </details>
