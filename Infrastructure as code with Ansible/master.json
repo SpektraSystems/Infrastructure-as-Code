@@ -1,0 +1,31 @@
+[
+  {
+    "Name": "Start your first Linux Virtual Machine on Azure",
+    "Language": "English",
+    "Files": [
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/Infrastructure-as-Code/master/Infrastructure%20as%20code%20with%20Ansible/01-Basics/guide.md",
+        "Order": 1
+
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/Infrastructure-as-Code/master/Infrastructure%20as%20code%20with%20Ansible/02-Veriables/guide.md",
+        "Order": 2
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/Infrastructure-as-Code/master/Infrastructure%20as%20code%20with%20Ansible/03-Helpers/guide.md",
+        "Order": 3
+      },
+            {
+        "RawFilePath": "https://github.com/SpektraSystems/Infrastructure-as-Code/blob/master/Infrastructure%20as%20code%20with%20Ansible/04-security/guide.md",
+        "Order": 4
+
+      },
+            {
+        "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/Infrastructure-as-Code/master/Infrastructure%20as%20code%20with%20Ansible/05-Reusability/guide.md",
+        "Order": 5
+
+      }
+    ]
+  }
+]
