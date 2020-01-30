@@ -114,19 +114,7 @@ Azure CLI
 az group deployment create --resource-group IoC-02-000000 --template-file azuredeploy.json --verbose
 ```
 
-After the deployment go to the Azure Portal to see the virtual network created in the resource group.  Find the virtual network and view the subnet created. You can also use the following commands:
-
-PowerShell
-
-```PowerShell
-Get-AzVirtualNetwork -ResourceGroupName IoC-02-000000
-```
-
-Azure CLI
-
-```bash
-az network vnet list -g IoC-02-000000 -o table
-```
+After the deployment go to the Azure Portal to see the virtual network created in the resource group. 
 
 Note that there is only one subnet in the virtual network.
 
