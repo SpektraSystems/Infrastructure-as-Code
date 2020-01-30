@@ -23,7 +23,7 @@ We recommend using VS Code for creating playbooks and running your playbook in C
 
 - To run playbook in Cloud Shell simply click your *.yml file; right click and then select `Run your playbook in Cloud Shell`
 - If you have not logged in, the Azure Account extension will prompt you to sign in.
-- File is copied to the `clouddrive` folder in Cloud Shell(to navigate to cloudrive folder in Cloud Shell run folloing command "cd clouddrive") upon saving so you don't need to explicitly copy file to Cloud Shell unless otherwise stated in the lab.
+- File is copied to the `clouddrive` folder in Cloud Shell (To navigate to cloudrive folder in Cloud Shell run the following command "cd clouddrive") upon saving so you don't need to explicitly copy file to Cloud Shell unless otherwise stated in the lab.
 
 ## Create a resource group
 
