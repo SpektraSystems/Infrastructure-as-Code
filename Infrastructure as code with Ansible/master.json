@@ -17,7 +17,7 @@
         "Order": 3
       },
             {
-        "RawFilePath": "https://github.com/SpektraSystems/Infrastructure-as-Code/blob/master/Infrastructure%20as%20code%20with%20Ansible/04-security/guide.md",
+        "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/Infrastructure-as-Code/master/Infrastructure%20as%20code%20with%20Ansible/04-security/guide.md",
         "Order": 4
 
       },
