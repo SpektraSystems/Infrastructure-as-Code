@@ -1,5 +1,6 @@
 # Terraform Lab 2 - Variables
 In this section you will build upon the infrastructure (VNet + subnet) you created earlier by creating a virtual machine and adding a network interface to it to allow that virtual machine to communicate with the outside world. After creating this additional infrastructure, you will learn how to define and use variables inside your Terraform code to parameterize resources. You will also learn how Terraform refers to resources internally and how it is able to construct a dependency graph (Directed Acyclic Graph, or a DAG for the comp sci majors) without explicitly defining it.
+> **NOTE** Remember to push your changes to Azure Cloud Shell in cloudrive/your_directory path if you are not at this path run "cd clouddrive/your_directory_name".
 
 ## Update vnet.tf
 
@@ -226,8 +227,6 @@ rg = "<<<NAME OF YOUR ASSIGNED RESOURCE GROUP>>>"
 location = "<<<REGION OF YOUR ASSIGNED RESOURCE GROUP>>>"
 ```
 </details>
-
-> **NOTE** Remember to push your changes to Azure Cloud Shell before moving on to the next steps in your terraform directory in cloud shell.(you can use "cd your directory name" to navigate cloud shell o your directory).
 
 ## Plan your infrastructure via 'terraform plan'
 Now you are ready once again to plan and deploy the infrastructure into Azure. From the console window within the folder with all the .tf files, go ahead and execute the following command:
