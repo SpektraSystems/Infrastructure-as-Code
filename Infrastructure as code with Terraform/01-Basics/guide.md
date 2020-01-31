@@ -26,6 +26,7 @@ Terraform executable evaluates all files within the directory it's being execute
 Another key Terraform strength is the multitude of providers available for different cloud environments for infrastructure provisioning. Note that does not imply "write infrastructure once, run everywhere," but rather a common syntax used to codify infrastructure, one set per environment.
 
 For our workshop, we will need to specify that we will be using Terraform provider for Azure. First, following Terraform best practices, create a new file that will contain the code indicating the use of Azure provider. Give this new file a name `provider.tf`. Then, using [Terraform Azure provider documentation](https://www.terraform.io/docs/providers/azurerm/index.html), locate the block of HCL code that specifies the use of Azure provider for Terraform, paste it inside provider.tf and save the file. In this lab, you will need to use at least version 1.35.0 of the provder.
+>**NOTE** Follow Cheat sheet for creating provider.tf.
 
 ## Cheat Sheet: provider.tf
 <details>
@@ -80,7 +81,7 @@ address_prefix should be "10.0.1.0/24"
 
 Make sure to save vnet.tf before the following step.
 
->**NOTE** follow Cheat sheet for creating Vnet with a subnet.
+>**NOTE** Follow Cheat sheet for creating Vnet with a subnet.
 ## Cheat Sheet: vnet.tf
 
 <details>
