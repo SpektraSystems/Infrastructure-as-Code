@@ -11,7 +11,8 @@ Update your vnet.tf file as follows:
 1. Add the `resource_group_name` to the `azurerm_subnet` resource.
 1. Delete the entire `subnet` block from the `azurerm_virtual_network` resource.
 
->**NOTE**: Moving the subnet from the `azurerm_virtual_network` to its own `azurerm_subnet` will NOT result in a change to Azure, however, doing this allows you to refer to the subnet id property using the expression `azurerm_subnet.predaysubnet.id` rather than a much more complicated expression.
+>**NOTE**: Moving the subnet from the `azurerm_virtual_network` to its own `azurerm_subnet` will not change the result into Azure, however, doing this allows you to refer to the subnet id property using the expression `azurerm_subnet.predaysubnet.id` rather than a much more complicated expression.
+Follow Cheat sheet for updating Vnet.tf.
 
 ## CHEAT SHEET
 <details>
@@ -61,7 +62,7 @@ Now, using [Terraform Azure provider documentation for network interface](https:
   }
 }
 ```
-
+>**NOTE** Follow Cheat sheet for creating nic.tf.
 ## CHEAT SHEET
 <details>
 <summary>
@@ -120,6 +121,7 @@ Now, using [Terraform Azure provider documentation for virtual machine](https://
 ```
 
 Make sure to save all the files you were working with before the following step.
+>**NOTE** Follow Cheat sheet for creating vm.tf.
 
 
 ## CHEAT SHEET
@@ -200,7 +202,7 @@ location            = var.location
 Go ahead and replace all previously hard-coded values for Azure regions and resource group name with variable definition.
 
 > **HINT** you should have replaced the location for 3 resources and resource group for all 4 resources.
-
+>**NOTE** Follow Cheat sheet for creating variables.tf and terraform.tfvars.
 ## CHEAT SHEETS
 <details>
 <summary>Expand for variables.tf code</summary>
