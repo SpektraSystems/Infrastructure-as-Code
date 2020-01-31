@@ -78,7 +78,7 @@ Expand to see how you can create a VNet
 </summary>
 
 ```yaml
-  - name: Create Azure VM
+ - name: virtual network
   hosts: localhost
   connection: local
   tasks:
@@ -91,7 +91,6 @@ Expand to see how you can create a VNet
 
 </details>
 
-> **NOTE:** To run playbook in Cloud Shall Navigate go your ansible file you can navigate to your folder run following command "cd clouddrive/ansible playbook".
 ```bash
 pui@Azure:~$ ansible-playbook ./clouddrive/ansible-playbooks/lab1.yml
  [WARNING]: No inventory was parsed, only implicit localhost is available
