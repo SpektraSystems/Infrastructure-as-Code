@@ -230,6 +230,7 @@ location = "<<<REGION OF YOUR ASSIGNED RESOURCE GROUP>>>"
 
 ## Plan your infrastructure via 'terraform plan'
 Now you are ready once again to plan and deploy the infrastructure into Azure. From the console window within the folder with all the .tf files, go ahead and execute the following command:
+> **NOTE** Remember to push your changes to Azure Cloud Shell before moving on to the next steps in your terraform directory in cloud shell.
 
 ```terraform plan -out tfplan```
 
