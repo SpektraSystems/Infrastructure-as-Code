@@ -11,8 +11,7 @@ Update your vnet.tf file as follows:
 1. Add the `resource_group_name` to the `azurerm_subnet` resource.
 1. Delete the entire `subnet` block from the `azurerm_virtual_network` resource.
 
->**NOTE**: Moving the subnet from the `azurerm_virtual_network` to its own `azurerm_subnet` will not change the result into Azure, however, doing this allows you to refer to the subnet id property using the expression `azurerm_subnet.predaysubnet.id` rather than a much more complicated expression.
-Follow Cheat sheet for updating Vnet.tf.
+>**NOTE**: Moving the subnet from the `azurerm_virtual_network` to its own `azurerm_subnet` will not change the result into Azure, however, doing this allows you to refer to the subnet id property using the expression `azurerm_subnet.predaysubnet.id` rather than a much more complicated expression.**Follow Cheat sheet for updating Vnet.tf**.
 
 ## CHEAT SHEET
 <details>
