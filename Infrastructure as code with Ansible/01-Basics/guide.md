@@ -13,7 +13,7 @@ We recommend using VS Code for creating playbooks and running your playbook in C
 
 [Ansible](https://marketplace.visualstudio.com/items?itemName=vscoss.vscode-ansible) and [Azure account](https://marketplace.visualstudio.com/items?itemName=ms-vscode.azure-account) extensions are required and already installed in your VS Code environment. The [Ansible extension overview](https://marketplace.visualstudio.com/items?itemName=vscoss.vscode-ansible) provides good guidance on what you need to do to get started. On a high level:
 
-- associate your YAML files with `ansible` language in VSCode `settings.json`to navigate to this file open File/prefrences/settings then search for "File association" in search bar then select Edit in settings.json. Copy below code and paste in settings.json file :
+- associate your YAML files with `ansible` language in VSCode `settings.json`to navigate to this file open File/prefrences/settings then search for "File association" in search bar then select Edit in settings.json. Copy below code and paste in settings.json file (inside {} brackets) :
 
 ```json
     "files.associations": {
@@ -55,7 +55,7 @@ When all resources created in this workshop are no longer needed, you can easily
 A virtual network is a virtual, isolated portion of the Azure public network. Each virtual network is dedicated to your subscription. Create one that uses "172.16.0.0/16" as address prefix.
 
 1. Create a new .yml file.
-2. Use `Hosts: localhost` in the header. Control node is the node Ansible is installed on. The hosts parameter is what the playbook will be executed on. `Hosts: localhost` means the playbook is executed on the localhost only. Your playbook should have this format:
+2. Use `Hosts: localhost`. Control node is the node Ansible is installed on. The hosts parameter is what the playbook will be executed on. `Hosts: localhost` means the playbook is executed on the localhost only. Your playbook should have this format:
 
 ```yaml
 - hosts: localhost
@@ -86,13 +86,12 @@ Expand to see how you can create a VNet
     azure_rm_virtualnetwork:
       resource_group: IoC-02-144375 
       name: myVnet
-      address_prefixes: "10.0.0.0/16"
+      address_prefixes: "172.16.0.0/16"
 ```
 
 </details>
 
-> **NOTE:** The `gather_facts` module is automatically called by playbooks to gather useful variables about remote hosts that can be used in playbooks. You can disable gathering facts by including `gather_facts: no` in the header. You may also get warnings like below. This is because you have no inventory.
-
+> **NOTE:** To run playbook in Cloud Shall Navigate go your ansible file you can navigate to your folder run following command "cd clouddrive/ansible playbook".
 ```bash
 pui@Azure:~$ ansible-playbook ./clouddrive/ansible-playbooks/lab1.yml
  [WARNING]: No inventory was parsed, only implicit localhost is available
@@ -131,7 +130,7 @@ Expand to see how you can create a subnet
         resource_group: myResource_group
         virtual_network_name: myVnet
         name: myVnetSubnet
-        address_prefix_cidr:  "10.0.0.0/24"
+        address_prefix_cidr:  "172.16.0.0/24"
 ```
 
 </details>
