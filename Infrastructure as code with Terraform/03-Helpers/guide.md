@@ -13,7 +13,8 @@ Set address prefix as "10.0.2.0/24"
 ```
 
 Save your changes before moving onto the next part - securing your subnet.
- **NOTE** Follow the Cheat Sheet for updating the vnet.tf.
+
+**NOTE** Follow the Cheat Sheet for updating the vnet.tf.
 ## CHEAT SHEET
 <details>
 <summary>
@@ -101,7 +102,6 @@ security_group_rules = [
 ```
 
 Note the use of "[]" to define the variable as type list - a list of security rules in this case.
- **NOTE** Follow the Cheat Sheet for updating variable.tf.
 
 ## Edit vnet.tf - Part 2
 With rules defined in our variable, it is time to use iterators and helper functions to define the Azure resources based on those variables. First, we'll use the helper *lower* function - this function returns the lower-case representation of the string we pass into it. We will also use the *title* helper function that capitalizes just the first letter of the string passed in.
