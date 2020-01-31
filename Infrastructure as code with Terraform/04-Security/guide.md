@@ -249,7 +249,7 @@ Assuming that the configuration completed successfully, you can validate that ev
 
 ## Part 2 - Use Secret
 
-In this part of the lab you will use the secret that you just created to replace the password for your virtual machine. To do this we will be editing three of the files from the previous lab(Terraform directory): variables.tf, terrafrom.tfvars, vm.tf.
+In this part of the lab you will use the secret that you just created to replace the password for your virtual machine. To do this we will be editing three of the files from the previous lab(Terraform lab-3 files): variables.tf, terrafrom.tfvars, vm.tf.
 
 Lets start by adding the variable that you will need to reference the secret from your virtual machine resource. Add three new variables with the following names(Variable.tf) and values(terraform.tfvars):
 - `secret_id`= "lab04admin"
