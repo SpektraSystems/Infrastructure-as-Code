@@ -80,7 +80,9 @@ address_prefix should be "10.0.1.0/24"
 
 Make sure to save vnet.tf before the following step.
 
+>**NOTE** follow Cheat sheet for creating Vnet with a subnet.
 ## Cheat Sheet: vnet.tf
+
 <details>
 <summary>Expand for vnet.tf code</summary>
 
@@ -102,7 +104,7 @@ resource "azurerm_virtual_network" "predayvnet" {
 >**NOTE** (Navigate your cloud shell to clouddrive directory by using "cd clouddrive").Prior to running any Terraform commands in Azure Cloud Shell, make sure that you select View > Command Palette... > Azure Terraform: push in order to push your latest changes up to your cloud shell environment. 
 
 ## Initialize your Terraform environment
-Before provisioning your environement, you need to ensure that Terraform is initialized using the [init command](https://www.terraform.io/docs/commands/init.html). This process will initialize a working directory containing Terraform configuration files.
+Before provisioning your environement in Cloud Shell navigate to clouddrive using following command "cd clouddrive",then you need to ensure that Terraform is initialized using the [init command](https://www.terraform.io/docs/commands/init.html). This process will initialize a working directory containing Terraform configuration files.
 
 ```terraform init```
 
