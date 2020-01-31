@@ -200,8 +200,7 @@ location            = var.location
 
 Go ahead and replace all previously hard-coded values for Azure regions and resource group name with variable definition.
 
-> **HINT** you should have replaced the location for 3 resources and resource group for all 4 resources.
->**NOTE** Follow Cheat sheet for creating variables.tf and terraform.tfvars.
+> **HINT** you should have replaced the location for 3 resources and resource group for all 4 resources.**Follow Cheat sheet for creating variables.tf and terraform.tfvars.**
 ## CHEAT SHEETS
 <details>
 <summary>Expand for variables.tf code</summary>
