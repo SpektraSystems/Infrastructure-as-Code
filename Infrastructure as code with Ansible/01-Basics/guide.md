@@ -13,7 +13,7 @@ We recommend using VS Code for creating playbooks and running your playbook in C
 
 [Ansible](https://marketplace.visualstudio.com/items?itemName=vscoss.vscode-ansible) and [Azure account](https://marketplace.visualstudio.com/items?itemName=ms-vscode.azure-account) extensions are required and already installed in your VS Code environment. The [Ansible extension overview](https://marketplace.visualstudio.com/items?itemName=vscoss.vscode-ansible) provides good guidance on what you need to do to get started. On a high level:
 
-- associate your YAML files with `ansible` language in VSCode `settings.json`to navigate to this file open File/prefrences/settings then search for "File association" then select Edit in settings.json. Copy below code and paste in settings.json file :
+- associate your YAML files with `ansible` language in VSCode `settings.json`to navigate to this file open File/prefrences/settings then search for "File association" in search bar then select Edit in settings.json. Copy below code and paste in settings.json file :
 
 ```json
     "files.associations": {
