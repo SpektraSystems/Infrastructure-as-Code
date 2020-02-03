@@ -40,6 +40,7 @@ Public IP addresses allow Internet resources to communicate inbound to Azure res
 1. Add a new variable called `myPublicIP` to your playbook
 1. Use the [azure_rm_publicipaddres](https://docs.ansible.com/ansible/latest/modules/azure_rm_publicipaddress_module.html) to create a Public IP Address.
 1. Run your playbook.
+> **NOTE:** Follow cheat Sheet for creating Public IP.
 
 #### Cheat Sheet: public IP address
 <details>
