@@ -98,8 +98,8 @@ Expand to see how you use loop to create the NSG rules
 ```yaml
   - name: Create Network Security Group and rules
     azure_rm_securitygroup:
-      resource_group: "{{ myResource_group }}"
-      name: "{{ myNetworkSecurityGroup}}"
+      resource_group: "{{ resource_group }}"
+      name: "myNetworkSecurityGroup
       rules:
         - name: "{{ item.name }}"
           access: "{{ item.access }}"
