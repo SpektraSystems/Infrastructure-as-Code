@@ -39,7 +39,7 @@ Run your playbook by right clicking your .yml file and select **Run playbook rem
 ## Add a secret to Azure Key Vault
 
 Azure Key Vault is a tool for securely storing and accessing secrets. We have pre-provisioned an Azure Key Vault for you in the first resource group, i.e., `IoC-01-XXXXXX`. The name should be `keyvaultXXXXXX` where `XXXXXX` is the last 6 digits of your first resource group.
-
+1. Create two verible one for keyvault_name and second for secret_name.
 1. Use [azure_rm_keyvault](https://docs.ansible.com/ansible/latest/modules/azure_rm_keyvault_module.html) to create an Azure Key Vault. For the purpose of this lab, we have pre-provisioned an Azure Key Vault for each lab participant.
 1. Use [azure_rm_keyvaultsecret](https://docs.ansible.com/ansible/latest/modules/azure_rm_keyvaultsecret_module.html) to add a secret
 
