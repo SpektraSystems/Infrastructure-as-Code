@@ -53,7 +53,7 @@ Expand to see how you can create a public IP address
     azure_rm_publicipaddress:
       resource_group: "{{ resource_group }}"
       allocation_method: dynamic
-      name: mypubip
+      name: "{{ myPublicIP }}"
 ```
 
 </details>
@@ -62,7 +62,7 @@ Expand to see how you can create a public IP address
 
 A network interface enables an Azure Virtual Machine to communicate with internet, Azure, and on-premises resources.
 
-1. Add to your existing playbook a variable call `myNIC`.
+1. Add to your existing playbook a variable call ` `.
 2. Use the [azure_rm_networkinterface](https://docs.ansible.com/ansible/latest/modules/azure_rm_networkinterface_module.html) to complete this step.
 3. Run your playbook.
 
@@ -75,15 +75,15 @@ Expand to see how you can create a NIC
 </summary>
 
 ```yaml
-   - name: Create network interface card
+    name: Create network interface card
     azure_rm_networkinterface:
       resource_group: "{{ resource_group }}"
-      name: nic
+      name: "{{ myNIC }}"
       virtual_network: myVnet
       subnet: myVnetSubnet
       ip_configurations:
         - name: ipconfig
-          public_ip_address_name: mypubip
+          public_ip_address_name: "{{ myPublicIP }}"
           primary: yes
 ```
 
