@@ -20,10 +20,10 @@ Network security groups filter network traffic between Azure resources in a virt
 Next, let's add more inbound rules to open some ports. A direct way is to do the following:
 
 ```yml
-  - name: Create Network Security Group that allows SSH,HTTP and 
+ - name: Create Network Security Group that allows SSH,HTTP and 
     azure_rm_securitygroup:
-      resource_group: "{{ myResource_group }}"
-      name: "{{ myNetworkSecurityGroup}}"
+      resource_group: "{{ resource_group }}"
+      name: myNetworkSecurityGroup
       rules:
         - name: Allow-SSH
           access: Allow
@@ -46,18 +46,6 @@ Next, let's add more inbound rules to open some ports. A direct way is to do the
           priority: 200
           direction: Inbound
           source_address_prefix: Internet
-```
-
-You may want to block some ports as well so, perhaps you will add another rule like this:
-
-```yml
-        - name: Deny-Internet-all
-          protocol: Tcp
-          destination_port_range: *
-          access: Deny
-          priority: 400
-          direction: Outbound
-          source_address_prefix: *
 ```
 
 As you create more NSG rules, your playbook can become lengthy and unmanageable.
