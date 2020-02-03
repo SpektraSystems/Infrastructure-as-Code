@@ -40,8 +40,6 @@ You can also hit `F1` to explicitly copy files to remote host:
 
 Run your playbook by right clicking your .yml file and select **Run playbook remotely via SSH**.
 
-![Run in remote host](../../images/vs-host.png "Run in remote SSH host")
-
 ## Add a secret to Azure Key Vault
 
 Azure Key Vault is a tool for securely storing and accessing secrets. We have pre-provisioned an Azure Key Vault for you in the first resource group, i.e., `IoC-01-XXXXXX`. The name should be `keyvaultXXXXXX` where `XXXXXX` is the last 6 digits of your first resource group.
