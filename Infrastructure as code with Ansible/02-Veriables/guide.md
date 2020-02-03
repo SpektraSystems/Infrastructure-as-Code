@@ -19,9 +19,7 @@ You can define variables directly inline. By adding `vars:` in the header.
 ```yaml
 - hosts: localhost
   vars:
-    myResource_group: myResource_group
-    myVNet: myVNet
-    mySubNet: "{{ myVnet }}Subnet"
+     resource_group: IoC-02-XXXXX
   tasks:
   - name: ...
     ...
@@ -51,11 +49,11 @@ Expand to see how you can create a public IP address
 </summary>
 
 ```yaml
-  - name: Create public IP address
+ - name: Create public IP address
     azure_rm_publicipaddress:
-      resource_group: "{{ myResource_group }}"
-      allocation_method: Static
-      name: "{{ myPublicIP }}"
+      resource_group: "{{ resource_group }}"
+      allocation_method: dynamic
+      name: mypubip
 ```
 
 </details>
