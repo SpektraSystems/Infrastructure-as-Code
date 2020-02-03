@@ -84,7 +84,7 @@ Expand to see how you can create a VNet
   tasks:
   - name: Create virtual network
     azure_rm_virtualnetwork:
-      resource_group: IoC-02-144375 
+      resource_group: IoC-02-XXXXX
       name: myVnet
       address_prefixes: "172.16.0.0/16"
 ```
@@ -116,6 +116,7 @@ Subnets enable you to segment the virtual network into one or more sub-networks 
 
 1. Add as the next task to your existing playbook and use [azure_rm_subnet](https://docs.ansible.com/ansible/latest/modules/azure_rm_subnet_module.html) module to create the subnet.
 2. Run your playbook in Cloud Shell again. All Azure modules (except azure_rm_deployment) are implemented to support idempotency. Since you didn't change anything in previous task and the virtual already exists, all three (three because of the 1st "Gathering Facts" task) are `ok`; only one changed is made.
+> **NOTE:** Follow Cheat Sheet to create subnet in Virtual Network.
 
 #### Cheat Sheet: subnet
 <details>
