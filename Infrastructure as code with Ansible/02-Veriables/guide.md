@@ -110,39 +110,18 @@ Expand to see how you can create a VM using SSH key to access the host.
 ```yml
   - name: Create a virtual machine
     azure_rm_virtualmachine:
-      resource_group: "{{ myResource_group }}"
-      name: "{{ myVM }}"
+      resource_group: "{{ resource_group }}"
+      name: myvm
       admin_username: "testadmin"
       admin_password: "Password1234!"
-      vm_size: Standard_B1ms
-      network_interfaces: "{{ myNIC }}"
+      vm_size: Standard_A1_v2
+      network_interfaces: nic
       image:
         offer: UbuntuServer
         publisher: Canonical
         sku: 16.04-LTS
         version: latest
   ```
-
-- To create a VM using SSH key:
-
-```yaml
-- name: Create a virtual machines
-  azure_rm_virtualmachine:
-    resource_group: "{{ myResource_group }}"
-    name: "{{ myVM }}"
-    admin_username: "testadmin"
-    ssh_password_enabled: false
-    ssh_public_keys:
-      - path: /home/testadmin/.ssh/authorized_keys
-        key_data: "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
-    vm_size: Standard_B1ms
-      network_interfaces: "{{ myNIC }}"
-      image:
-        offer: UbuntuServer
-        publisher: Canonical
-        sku: 16.04-LTS
-        version: latest
-```
 
 </details>
 
