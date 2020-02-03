@@ -75,14 +75,15 @@ Expand to see how you can create a NIC
 </summary>
 
 ```yaml
+   - name: Create network interface card
     azure_rm_networkinterface:
-      resource_group: "{{ myResource_group }}"
-      name: "{{ myNIC }}"
-      virtual_network: "{{ myVnet }}"
-      subnet: "{{ myVnetSubNet }}"
+      resource_group: "{{ resource_group }}"
+      name: nic
+      virtual_network: myVnet
+      subnet: myVnetSubnet
       ip_configurations:
         - name: ipconfig
-          public_ip_address_name: "{{ myPublicIP }}"
+          public_ip_address_name: mypubip
           primary: yes
 ```
 
