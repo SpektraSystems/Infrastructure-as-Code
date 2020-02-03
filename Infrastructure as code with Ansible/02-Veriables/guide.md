@@ -28,7 +28,6 @@ You can define variables directly inline. By adding `vars:` in the header.
 ```
 
 1. Replace hard coded values in your playbook with `"{{ variable_name }}"`. e.g., replace myResource_group with `"{{ myResource_group }}"`
-1. You can assign the value for a variable by adding prefix or suffix to another variable. e.g,. " {{ myVnet }}Subnet"
 1. Save and run your playbook in Cloud Shell.
 1. No change is made since you didn't modify any of the Azure resources.
 
