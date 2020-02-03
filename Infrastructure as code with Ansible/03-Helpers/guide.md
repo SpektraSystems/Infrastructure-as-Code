@@ -8,7 +8,7 @@ In this lab you will:
 
 Apart from creating the new Azure resource, you will modify the playbook you created in previous labs to use loops.
 
-## Create a network security group
+## Create a network security group (NSG)
 
 Network security groups filter network traffic between Azure resources in a virtual network.
 
@@ -16,6 +16,7 @@ Network security groups filter network traffic between Azure resources in a virt
 1. Use the [azure_rm_securitygroup](https://docs.ansible.com/ansible/latest/modules/azure_rm_securitygroup_module.html) to create a network security group that allows SSH traffic on TCP port 22.
 1. Add the NSG to the NIC you created in previous lab.
 1. Run your playbook.
+> **NOTE:** Follow cheat Sheet for creating NSG.
 
 Next, let's add more inbound rules to open some ports. A direct way is to do the following:
 
