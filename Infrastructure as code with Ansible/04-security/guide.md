@@ -60,67 +60,14 @@ Expand to see how you can create a key vault secret
 
 </details>
 
-## Retrieve secret from Azure Key Vault
-
-While preparing for this workshop, we discovered we do not have a module for retrieving secret from Azure Key Vault.
-
-We will be adding a new module called azure_rm_keyvaultsecret_info in future release. For the purpose of this lab, we will embed the new module using the `roles` keyword. (Roles will be explained in Lab 5.)
-
-1. You will perform an extra step in this lab to download the preview version of **azure_rm_keyvaultsecret_info** to your environment. Create a new file called **azure_rm_keyvaultsecret_info.py** in **`<<local folder>>/modules/library`**. `<<local folder>>` is the folder you created in your local machine to store all the Ansible playbooks for this lab. Make sure you keep the same folder structure `modules/library`. Copy the codes in `azure_rm_keyvaultsecret_info.py` in [modules/library](https://github.com/Azure/Ignite2019_IaC_pre-day_docs/tree/master/Ansible/04-Security/Code/modules/library) to your local copy.
-2. In the header, add:
-
-```yml
-  roles:
-    - ./modules
-```
-
-3. Use azure_rm_keyvaultsecret_info to get secret you added in previous step. Here are a couple of examples on how to you can get secret.
-
-```yml
-
-  - name: Get latest version of a secret
-    azure_rm_keyvaultsecret_info::
-      vault_uri: "https://myVault.vault.azure.net"
-      name: mysecret
-
-  - name: Get a specific version of a secret
-    azure_rm_keyvaultsecret_info:
-      vault_uri: "https://myVault.vault.azure.net"
-      name: mysecret
-      version: 12345
-```
-
-### Cheat Sheet: get secret
-<details>
-<summary>
-Expand to see how you can get a key vault secret
-</summary>
-
-```yml
-  - name: Get latest version of a secret
-    azure_rm_keyvaultsecret_info:
-      vault_uri: "https://{{ keyvault_name }}.vault.azure.net"
-      name: "{{ secret_name }}"
-    register: output
-
-- debug:
-      var: output.secret.value
-```
-
-</details>
-
-> **CODE**: To view all of the completed codes, go to [lab4-keyvault.yml](Code/lab4-keyvault.yml). 
-
 ## Replace hard coded password in previous lab
 
 Next, instead of hard coding the password and exposing a major security risk when provisioning the VM, you can now:
-
-1. Make sure you have already copied **azure_rm_keyvaultsecret_info.py** in [modules/library](https://github.com/Azure/Ignite2019_IaC_pre-day_docs/tree/master/Ansible/04-Security/Code/modules/library) to **`<<local folder>>/modules/library`**.
-2. Run a task to retrieve the secret from Azure Key Vault. **Hint**: use `register output`
-3. Use the value retrieved back from key vault to configure the admin password for the VM. **Hint**: use `output.secret.value`
+- In the Azure Portal select the Properties tab for the Azure KeyVault
+- Find the resourceId in the Properties window, and click the copy icon
+- Create a varible "admin_password" paste the resourceId as a value.
 
 ### Cheat Sheet: pass secret retrieved from Key Vault to the next task
-
 <details>
 <summary>
 Expand to see how you can pass secret retrieved from Key Vault to the next task
