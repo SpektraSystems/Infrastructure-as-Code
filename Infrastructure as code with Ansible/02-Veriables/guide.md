@@ -65,7 +65,7 @@ A network interface enables an Azure Virtual Machine to communicate with interne
 1. Add to your existing playbook a variable call ` `.
 2. Use the [azure_rm_networkinterface](https://docs.ansible.com/ansible/latest/modules/azure_rm_networkinterface_module.html) to complete this step.
 3. Run your playbook.
-
+> **NOTE:** Follow cheat Sheet for creating NIC.
 You can now see `myNIC` in your resource group.
 
 #### Cheat Sheet: NIC
@@ -99,6 +99,7 @@ Expand to see how you can create a NIC
     - version: latest
 3. To simplify, let's create a VM that uses admin user `testadmin` and a password `Password1234!` to access the host.
 4. Run your playbook.
+> **NOTE:** Follow cheat Sheet for creating VM.
 
 #### Cheat Sheet: VM
 <details>
@@ -111,7 +112,7 @@ Expand to see how you can create a VM using SSH key to access the host.
   - name: Create a virtual machine
     azure_rm_virtualmachine:
       resource_group: "{{ resource_group }}"
-      name: myvm
+      name: "{{ myVM }}"
       admin_username: "testadmin"
       admin_password: "Password1234!"
       vm_size: Standard_A1_v2
