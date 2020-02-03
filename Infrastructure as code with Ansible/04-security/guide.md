@@ -22,8 +22,6 @@ The VS Code Ansible extension provides better integration experience when you ne
 
 When running your playbook remotely via SSH, you will be prompted if you want to always save your workspace in the remote host. 
 
-![Save workspace](../../images/vs-save-wspace.png "Copy worspace to remote host")
-
 You can also hit `F1` to explicitly copy files to remote host:
 
 1. Hit `F1`
