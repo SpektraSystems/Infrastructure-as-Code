@@ -50,7 +50,6 @@ Expand to see how you can create a key vault secret
 </summary>
 
 ```yml
-  tasks:
   - name: create a Key Vault secret
     azure_rm_keyvaultsecret:
       keyvault_uri: "https://{{ keyvault_name }}.vault.azure.net"
@@ -85,7 +84,7 @@ Expand to see how you can pass secret retrieved from Key Vault to the next task
       resource_group: "{{ myResource_group }}"
       name: "{{ myVM }}"
       admin_username: "testadmin"
-      admin_password: " {{ output.secret.value }}"
+      admin_password: " {{ adminPassword }}"
       vm_size: Standard_B1ms
       network_interfaces: "{{ myNIC }}"
       image:
