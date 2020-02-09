@@ -44,7 +44,7 @@ az login
 ### Deploy the Template
 
 A template will typically deploy a set of resources to a resource group.  An empty resource group is available for this lab with name of
-IoC-02-000000.
+IoC-02-XXXXX.
 
 > **NOTE:** For each step of the lab run the commands from the directory that contains the lab files, for example **C:\Users\demouser\Ignite2019_IaC_pre-day_docs\ARM Template\01 - Basics**
 
@@ -53,13 +53,13 @@ To deploy the template run the following command:
 PowerShell
 
 ```PowerShell
-New-AzResourceGroupDeployment -ResourceGroupName IoC-02-000000 -TemplateFile azuredeploy.json -Verbose
+New-AzResourceGroupDeployment -ResourceGroupName IoC-02-XXXXX -TemplateFile azuredeploy.json -Verbose
 ```
 
 Azure CLI
 
 ```bash
-az group deployment create --resource-group IoC-02-000000 --template-file azuredeploy.json --verbose
+az group deployment create --resource-group IoC-02-XXXXX --template-file azuredeploy.json --verbose
 ```
 
 You will see the status of the deployment in the command window.  Since this template is empty, no resources are created and the deployment will finish quickly.
@@ -105,13 +105,13 @@ To deploy the template run the following command:
 PowerShell
 
 ```PowerShell
-New-AzResourceGroupDeployment -ResourceGroupName IoC-02-000000 -TemplateFile azuredeploy.json -Verbose
+New-AzResourceGroupDeployment -ResourceGroupName IoC-02-XXXXX -TemplateFile azuredeploy.json -Verbose
 ```
 
 Azure CLI
 
 ```bash
-az group deployment create --resource-group IoC-02-000000 --template-file azuredeploy.json --verbose
+az group deployment create --resource-group IoC-02-XXXXX --template-file azuredeploy.json --verbose
 ```
 
 After the deployment go to the Azure Portal to see the virtual network created in the resource group. 
