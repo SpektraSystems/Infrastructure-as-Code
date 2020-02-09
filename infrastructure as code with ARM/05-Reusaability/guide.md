@@ -132,17 +132,17 @@ Before deploying the template, use VS Code to inspect your template for errors. 
 PowerShell
 
 ```PowerShell
-New-AzResourceGroupDeployment -ResourceGroupName IoC-02-000000 -TemplateFile azuredeploy.json -TemplateParameters azuredeploy.parameters.json -Verbose
+New-AzResourceGroupDeployment -ResourceGroupName IoC-02-XXXXX -TemplateFile azuredeploy.json -TemplateParameters azuredeploy.parameters.json -Verbose
 ```
 
 ```PowerShell
-New-AzResourceGroupDeployment -ResourceGroupName IoC-02-000000 -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json -Verbose
+New-AzResourceGroupDeployment -ResourceGroupName IoC-02-XXXXX -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json -Verbose
 ```
 
 Azure CLI
 
 ```bash
-az group deployment create --resource-group IoC-02-000000 --template-file azuredeploy.json --parameters '@azuredeploy.parameters.json' --verbose
+az group deployment create --resource-group IoC-02-XXXXX --template-file azuredeploy.json --parameters '@azuredeploy.parameters.json' --verbose
 ```
 
 After the deployment completes, or while the deployment is in process, you can open the Azure Portal and see the resources deployed into your resource group.
