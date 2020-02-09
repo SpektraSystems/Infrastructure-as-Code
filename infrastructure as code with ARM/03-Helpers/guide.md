@@ -88,7 +88,7 @@ Connect-AzAccount
 After login, run the following command:
 
 ```PowerShell
-New-AzResourceGroupDeploymentWhatif -ResourceGroupName IoC-02-000000 -TemplateUri azuredeploy.json
+New-AzResourceGroupDeploymentWhatif -ResourceGroupName IoC-02-XXXXX -TemplateUri azuredeploy.json
 ```
 
 When the command finishes you will see the output of the command showing that a Network Security Group will be added as a result of this deployment.
@@ -104,13 +104,13 @@ Before deploying the template, format the code (SHIFT+ALT+F) and VS Code to insp
 PowerShell
 
 ```PowerShell
-New-AzResourceGroupDeployment -ResourceGroupName IoC-02-000000 -TemplateFile azuredeploy.json -Verbose
+New-AzResourceGroupDeployment -ResourceGroupName IoC-02-XXXXX -TemplateFile azuredeploy.json -Verbose
 ```
 
 Azure CLI
 
 ```bash
-az group deployment create --resource-group IoC-02-000000 --template-file azuredeploy.json --verbose
+az group deployment create --resource-group IoC-02-XXXXX --template-file azuredeploy.json --verbose
 ```
 
 After the deployment completes, or while the deployment is in process, you can open the Azure Portal and see the resources deployed into your resource group.
@@ -280,13 +280,13 @@ Before deploying the template, use VS Code to inspect your template for errors. 
 PowerShell
 
 ```PowerShell
-New-AzResourceGroupDeployment -ResourceGroupName IoC-02-000000 -TemplateFile azuredeploy.json -Verbose
+New-AzResourceGroupDeployment -ResourceGroupName IoC-02-XXXXX -TemplateFile azuredeploy.json -Verbose
 ```
 
 Azure CLI
 
 ```bash
-az group deployment create --resource-group IoC-02-000000 --template-file azuredeploy.json --verbose
+az group deployment create --resource-group IoC-02-XXXXX --template-file azuredeploy.json --verbose
 ```
 
 After the deployment completes, or while the deployment is in process, you can open the Azure Portal and see the resources deployed into your resource group.
